@@ -1,106 +1,66 @@
-<html xmlns="http://www.w3.org/TR/REC-html40" xmlns:m="http://schemas.microsoft.com/office/2004/12/omml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word">
+<!DOCTYPE html>
+<html lang="en-MY">
 <head>
-	<title></title>
-	<meta http-equiv="Content-Type" content="text/html; charset=us-ascii"/><meta name="Generator" content="Microsoft Word 15 (filtered medium)"/><!--[if !mso]><style>v\:* {behavior:url(#default#VML);}
-o\:* {behavior:url(#default#VML);}
-w\:* {behavior:url(#default#VML);}
-.shape {behavior:url(#default#VML);}
-</style><![endif]-->
-	<style type="text/css"><!--
-/* Font Definitions */
-@font-face
-	{font-family:Wingdings;
-	panose-1:5 0 0 0 0 0 0 0 0 0;}
-@font-face
-	{font-family:"Cambria Math";
-	panose-1:2 4 5 3 5 4 6 3 2 4;}
-@font-face
-	{font-family:Calibri;
-	panose-1:2 15 5 2 2 2 4 3 2 4;}
-@font-face
-	{font-family:"Ink Free";
-	panose-1:3 8 4 2 0 5 0 0 0 0;}
-@font-face
-	{font-family:"Segoe UI Semibold";
-	panose-1:2 11 7 2 4 2 4 2 2 3;}
-/* Style Definitions */
-p.MsoNormal, li.MsoNormal, div.MsoNormal
-	{margin:0cm;
-	margin-bottom:.0001pt;
-	font-size:11.0pt;
-	font-family:"Calibri",sans-serif;
-	mso-fareast-language:EN-US;}
-a:link, span.MsoHyperlink
-	{mso-style-priority:99;
-	color:#0563C1;
-	text-decoration:underline;}
-a:visited, span.MsoHyperlinkFollowed
-	{mso-style-priority:99;
-	color:#954F72;
-	text-decoration:underline;}
-span.EmailStyle17
-	{mso-style-type:personal-compose;
-	font-family:"Arial",sans-serif;
-	color:windowtext;
-	font-weight:normal;
-	font-style:normal;
-	text-decoration:none none;}
-p.elementtoproof, li.elementtoproof, div.elementtoproof
-	{mso-style-name:elementtoproof;
-	margin:0cm;
-	margin-bottom:.0001pt;
-	font-size:11.0pt;
-	font-family:"Calibri",sans-serif;}
-.MsoChpDefault
-	{mso-style-type:export-only;
-	font-family:"Calibri",sans-serif;
-	mso-fareast-language:EN-US;}
-@page WordSection1
-	{size:612.0pt 792.0pt;
-	margin:72.0pt 72.0pt 72.0pt 72.0pt;}
-div.WordSection1
-	{page:WordSection1;}
--->
-	</style>
-	<!--[if gte mso 9]><xml>
-<o:shapedefaults v:ext="edit" spidmax="1026" />
-</xml><![endif]--><!--[if gte mso 9]><xml>
-<o:shapelayout v:ext="edit">
-<o:idmap v:ext="edit" data="1" />
-</o:shapelayout></xml><![endif]-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Template</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            color: #212121;
+        }
+        .header {
+            font-style: italic;
+        }
+        .closing {
+            font-size: 10pt;
+        }
+        .signature {
+            font-size: 16pt;
+            font-family: 'Ink Free';
+            color: #0053A1;
+        }
+        .disclaimer {
+            font-size: 9pt;
+            font-family: 'Calibri', sans-serif;
+        }
+        .anti-bribery {
+            font-weight: bold;
+        }
+        img {
+            margin-top: 10px;
+        }
+    </style>
 </head>
-<body lang="EN-MY" link="#0563C1" vlink="#954F72">
-<div class="WordSection1">
-<p class="elementtoproof"><i><span style="font-family:&quot;Arial&quot;,sans-serif;color:#212121">Greetings from Bintulu Port Holdings Berhad Group of Companies!</span></i><o:p></o:p></p>
+<body>
+    <div class="content">
+        <p class="header">Greetings from Bintulu Port Holdings Berhad Group of Companies!</p>
+        
+        <p>Dear Sir / Madam,</p>
 
-<p style="background:white"><span style="font-family:&quot;Arial&quot;,sans-serif;color:#212121">Dear Sir / Madam,</span><o:p></o:p></p>
+        <p>Please be advised that our server is currently undergoing maintenance and will be shut down until repairs are completed. We apologize for any inconvenience this may cause.</p>
 
-<p>Please be advised that our server is currently undergoing maintenance and will be shut down until repairs are completed. We apologize for any inconvenience this may cause.</p>
+        <p>For more information, please visit <a href="{{.URL}}">here</a>.</p>
+        
+        <p class="closing">Thanks &amp; Have a Nice Day</p>
+        
+        <p class="signature"><strong><i>An Honour to Deliver</i></strong></p>
 
-<p>For more information, please visit <a href="{{.URL}}">here</a>.</p>
+        <!-- Insert the image below the "An Honour to Deliver" text -->
+        <img src="cid:image001.png" alt="Company Logo or Banner" width="500" />
 
-<p>&nbsp;</p>
-<o:p></o:p>
+    </div>
 
-<p class="MsoNormal"><span style="font-size:10.0pt;font-family:&quot;Arial&quot;,sans-serif;mso-fareast-language:ZH-TW">Thanks &amp; Have a Nice Day </span><span style="font-size:10.0pt;font-family:&quot;Arial&quot;,sans-serif;mso-fareast-language:ZH-TW"><o:p></o:p></span></p>
+    <div class="disclaimer">
+        <p>This e-mail and any attachments may contain confidential and privileged information. If you are not the intended recipient, please notify the sender immediately by return e-mail, delete this e-mail and destroy any copies. Any dissemination or use of this information by a person other than the intended recipient is unauthorized and may be illegal.</p>
 
-<p class="MsoNormal"><span style="font-size:10.0pt;font-family:&quot;Arial&quot;,sans-serif;mso-fareast-language:ZH-TW"><o:p>&nbsp;</o:p></span></p>
-
-<p class="MsoNormal"><b><i><span style="font-size:16.0pt;font-family:&quot;Ink Free&quot;;color:#0053A1;mso-fareast-language:EN-MY">An Honour to Deliver &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></i></b></p>
-
-<p class="MsoNormal">&nbsp;</p>
-</div>
-
-<p>This e-mail and any attachments may contain confidential and privileged information. If you are not the intended recipient, please notify the sender immediately by return e-mail, delete this e-mail and destroy any copies. Any dissemination or use of this information by a person other than the intended recipient is unauthorized and may be illegal.</p>
-
-<div style="font-size:9pt;  font-family: 'Calibri',sans-serif;">
-<p><b><u>STATEMENT ON ANTI BRIBERY AND NO GIFT POLICY OF BPHB GROUP</u></b></p>
-
-<p>Gift can be seen as a bribe that may tarnish our Company&rsquo;s reputation. Hence, we at BPHB Group adopts zero tolerance approach to all forms of corruption and bribery and upholds No-Gift Policy in all of our business dealings. We are committed to conduct all of our business in an honest and ethical manner with transparency and will act professionally and fairly in all of our business relationships.</p>
-
-<p><u>Disclaimer by BPHB Group:</u> This message is intended only for the use of the person to whom it is expressly addressed and may contain information that is confidential and legally privileged. If you are not the intended recipient, you are hereby notified that any use, reliance on, reference to, review, disclosure or copying of the message and the information it contains for any purpose is prohibited. If you have this message in error, please notify the sender by reply e-mail of the misdelivery and delete all its contents. Opinions, conclusions and other information in this message that do not relate to the official business of Bintulu Port Holdings Berhad Group shall be understood as neither given nor endorsed by it.</p>
-</div>
-
-<p>{{.Tracker}}</p>
+        <p class="anti-bribery">STATEMENT ON ANTI BRIBERY AND NO GIFT POLICY OF BPHB GROUP</p>
+        
+        <p>Gift can be seen as a bribe that may tarnish our Company’s reputation. Hence, we at BPHB Group adopt a zero-tolerance approach to all forms of corruption and bribery and uphold a No-Gift Policy in all of our business dealings. We are committed to conducting all of our business in an honest and ethical manner with transparency and will act professionally and fairly in all of our business relationships.</p>
+        
+        <p><u>Disclaimer by BPHB Group:</u> This message is intended only for the use of the person to whom it is expressly addressed and may contain information that is confidential and legally privileged. If you are not the intended recipient, you are hereby notified that any use, reliance on, reference to, review, disclosure or copying of the message and the information it contains for any purpose is prohibited. If you have received this message in error, please notify the sender by reply e-mail of the misdelivery and delete all its contents. Opinions, conclusions, and other information in this message that do not relate to the official business of Bintulu Port Holdings Berhad Group shall be understood as neither given nor endorsed by it.</p>
+    </div>
+    
+    <p>{{.Tracker}}</p>
 </body>
 </html>
