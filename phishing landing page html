@@ -1,0 +1,57 @@
+<html lang="en">
+<head>
+	<title>COMPANY Phishing</title>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+	<style type="text/css">.header{
+    background-color: #000;
+  }
+  .navLink{
+    display: inline-block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  b{
+    color:#EF5350;
+  }
+	</style>
+</head>
+<body>
+<div class="header" style="text-align:left;">
+<div class="navLink">
+<h3 style="margin:0;"><b>&nbsp;Phishing Awareness</b></h3>
+</div>
+</div>
+
+<div class="container" style="text-align:center">
+<div class="jumbotron">
+<h2>You clicked on a simulated phishing test.</h2>
+
+<h3>Here are some tips to help you stay safer in the future</h3>
+</div>
+
+<div class="row">
+<div class="col-md-4">
+<h1>Tip: #1</h1>
+
+<h2>Check the URL Carefully</h2>
+Always hover over links before clicking and ensure the URL looks legitimate. Look out for subtle misspellings or unusual domain extensions</div>
+
+<div class="col-md-4">
+<h1>Tip: #2</h1>
+
+<h2>Be Suspicious</h2>
+Never open email attachment or links unless you&#39;re expecting them, even the email seems to come from someone you know. Phishing often uses infected files to install malware</div>
+
+<div class="col-md-4">
+<h1>Tip: #3</h1>
+
+<h2>Verify the Sender</h2>
+If you&#39;re unsure about an email, verify the sender by contacting them through official channels (don&#39;t use the contact information from the email)</div>
+
+<p>&nbsp;</p>
+</div>
+</div>
+</body>
+</html>
