@@ -1,0 +1,477 @@
+Delivered-To: hisyamhanif289@gmail.com
+Received: by 2002:adf:eecf:0:b0:33f:77b3:71aa with SMTP id a15csp1150982wrp;
+        Mon, 18 Mar 2024 20:12:34 -0700 (PDT)
+X-Forwarded-Encrypted: i=3; AJvYcCUEu0t4AbvJgWe6StJr7S7HPh54r5mYdmazp4AZyFFd3YevQOwE9OvO2UmTz8Bb9p2u9wF+pM2Ax3YGvBWEpb1BwkNLy9IsHZA=
+X-Google-Smtp-Source: AGHT+IEzKAiytTPAzo1/jsmtg5Tr0hQUrWmWkVYjSyETdhA3+KuROozHfjMSVHJAPcNkf5PVOqSt
+X-Received: by 2002:a05:6214:a83:b0:690:c11b:a093 with SMTP id ev3-20020a0562140a8300b00690c11ba093mr11787987qvb.21.1710817953371;
+        Mon, 18 Mar 2024 20:12:33 -0700 (PDT)
+ARC-Seal: i=2; a=rsa-sha256; t=1710817953; cv=pass;
+        d=google.com; s=arc-20160816;
+        b=Hz6G76BHrSw78Y2z/1YHz/zCkI/xQ2U/2Sxg3LLjXeY70tUdnPexl6XdRaI8H8uH2N
+         uWkhM86r/FlqoxR2H6Jz3+QFG3N0HN3+/7ATwlh7BqJwFH0+JT/t44ro8kYgd5tiOsN/
+         KXV6iY8Trv2OlTiegKlbyTfOG8gZ5kDr+voL/4T8BHwKe6Pk2p+OFGLNwVZUT2N+wpYg
+         xztN5qP8Q8qddijR6iugCa+7FnPNTL1rDijeRtSfV7Vh78eDyXmZj8355fkcLCr0CE/q
+         C3iKuTjr8I555O7Tzb/4K2Ga5YyfmA1c1Pf/QwtU3Vh/5ZB7k47nrRVs8MSNNUB4d0Gi
+         Pu9A==
+ARC-Message-Signature: i=2; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=mime-version:content-language:accept-language:message-id:date
+         :thread-index:thread-topic:subject:cc:to:from;
+        bh=Ymq6Nxg50Ja9kJC3ENhXPoXItuhIRuicPiK0Z1LUCoc=;
+        fh=eY+IKiQePMidSQRSdoItpoFnCRKavIWMv7XgAsPBa1Q=;
+        b=BtJCTc7mH9ADE5lF0Uo1GM4CXJr1yXa8oLNQXZOXT7ARU+n3UjyGWsjPu1yJ+dQH5O
+         ZcyLj40FZvHAQLxkuoleQ/S/Wot8k41U77vHckNPpRUD8N/bmCbwQkLgaYaMGXHYw4o0
+         XkVzFLSnTSPdW6YozYZrxPP3ke5q+EUbA1CtpYB6T4s26lUN3yOsWw2EPtdhNCk83d1w
+         w+4w6RNSlrcROO3k8P29c4Vu7Erj+HdBUQDEusTyS46+r28FyAxLWvoi5can4VQLvTM/
+         ag3OzVVKcKazFs7kaqpeviqbDHFe38+3O1W6DtKirFmd8DmCnCnHIeCzd94jZ143SwYX
+         +ZxQ==;
+        dara=google.com
+ARC-Authentication-Results: i=2; mx.google.com;
+       arc=pass (i=1 spf=pass spfdomain=bintuluport.com.my dkim=pass dkdomain=bintuluport.com.my dmarc=pass fromdomain=bintuluport.com.my);
+       spf=pass (google.com: domain of zamzatul.azwani@bintuluport.com.my designates 2a01:111:f400:feab::71f as permitted sender) smtp.mailfrom=zamzatul.azwani@bintuluport.com.my;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=bintuluport.com.my
+Return-Path: <zamzatul.azwani@bintuluport.com.my>
+Received: from APC01-SG2-obe.outbound.protection.outlook.com (mail-sgaapc01on2071f.outbound.protection.outlook.com. [2a01:111:f400:feab::71f])
+        by mx.google.com with ESMTPS id f7-20020a0562141d2700b0068fe051b1f5si9879698qvd.478.2024.03.18.20.12.31
+        for <hisyamhanif289@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Mon, 18 Mar 2024 20:12:33 -0700 (PDT)
+Received-SPF: pass (google.com: domain of zamzatul.azwani@bintuluport.com.my designates 2a01:111:f400:feab::71f as permitted sender) client-ip=2a01:111:f400:feab::71f;
+Authentication-Results: mx.google.com;
+       arc=pass (i=1 spf=pass spfdomain=bintuluport.com.my dkim=pass dkdomain=bintuluport.com.my dmarc=pass fromdomain=bintuluport.com.my);
+       spf=pass (google.com: domain of zamzatul.azwani@bintuluport.com.my designates 2a01:111:f400:feab::71f as permitted sender) smtp.mailfrom=zamzatul.azwani@bintuluport.com.my;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=bintuluport.com.my
+ARC-Seal: i=1; a=rsa-sha256; s=arcselector9901; d=microsoft.com; cv=none; b=h6GixAyocJKhyZvBxuJzh1j3ykve/wJe5IN/BI7OrRSv94PNt2dpqYBdmBVW+RNzMVDwtOGzJj91/I/LMvt9noElUH/X8j9x9nUZHhM+fgSHSqqmjf5xcoRU9f5NabSviMnWq7jz9J8eWoPNU9AF1k/KmfnM8BhHxjIXObqBJMPbiH7EQ4qwlIpZbGRgmUqOk6vFgQHV+LAAAQeV8DqMi36BpX3kA1UQ9XF56U7pYgg2v8p/8uOP50JVsLGhGFUNcNvL06lAqCCTrGA1aSCq/R/W76PZvHC8CTWHBtTYsU7msoE79GdFX3NZv50Z1MBESqu7jeFYP2A3xKF6Cq1GfQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com; s=arcselector9901; h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-AntiSpam-MessageData-ChunkCount:X-MS-Exchange-AntiSpam-MessageData-0:X-MS-Exchange-AntiSpam-MessageData-1; bh=Ymq6Nxg50Ja9kJC3ENhXPoXItuhIRuicPiK0Z1LUCoc=; b=e6yoomAX5cUO7XaE4uT4w9smrY9ATQzuDA6FoZ5F9B7tQgJ+NHvMV4aNACdWy8KXW+Z5oOkhVJb/jQMz5PqvdTtqYfGaZpvHUWYpNovD4l2e/q0N7dGe937NHkdgPC5NvaRUC52z+gm6zO9Uh3EI90Ngs1yjA9SFLJiBw3FD6BwiCU3zgsDNED6KvoBeDZ1zreNF2WJJqiInXRJhZMbzJ4Wa54/HrE5wsh7ggVqSkRlyY0MS7/VFU+lqWI1zbHnCRgzHQFi2HZ7yWE4HPFSx7vVgb3nbMoVtHNYFnN7+Q58FxnnH6/yFDpY80XXePh69wPLK6O7WMM9x4VEWUYmi3g==
+ARC-Authentication-Results: i=1; mx.microsoft.com 1; spf=pass smtp.mailfrom=bintuluport.com.my; dmarc=pass action=none header.from=bintuluport.com.my; dkim=pass header.d=bintuluport.com.my; arc=none
+Received: from SI6PR01MB6295.apcprd01.prod.exchangelabs.com (2603:1096:4:24c::6) by JH0PR01MB5582.apcprd01.prod.exchangelabs.com (2603:1096:990:14::5) with Microsoft SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.7386.27; Tue, 19 Mar 2024 03:12:26 +0000
+Received: from SI6PR01MB6295.apcprd01.prod.exchangelabs.com ([fe80::3cb9:d8cc:d0c5:c67e]) by SI6PR01MB6295.apcprd01.prod.exchangelabs.com ([fe80::3cb9:d8cc:d0c5:c67e%4]) with mapi id 15.20.7386.023; Tue, 19 Mar 2024 03:12:25 +0000
+From: Zamzatul Azwani Binti Sazali <zamzatul.azwani@bintuluport.com.my>
+To: "sudir@upm.edu.my" <sudir@upm.edu.my>
+CC: "Talent & Development" <talentdevelopment@bintuluport.com.my>, AwgkuHanif AH <hisyamhanif289@gmail.com>, "STACHEAREENA VEEJA ANAK SINTAN / UPM" <s34097@student.upm.edu.my>
+Subject: PLACEMENT FOR INDUSTRIAL TRAINING IN BINTULU PORT
+Thread-Topic: PLACEMENT FOR INDUSTRIAL TRAINING IN BINTULU PORT
+Thread-Index: Adp5qj9TwyD+cgz1SMGwmS9CM64laA==
+Date: Tue, 19 Mar 2024 03:12:25 +0000
+Message-ID: <SI6PR01MB62956538FEF127751170BEC8CF2C2@SI6PR01MB6295.apcprd01.prod.exchangelabs.com>
+Accept-Language: en-US
+Content-Language: en-US
+X-MS-Has-Attach: yes
+X-MS-TNEF-Correlator: 
+x-ms-publictraffictype: Email
+x-ms-traffictypediagnostic: SI6PR01MB6295:EE_|JH0PR01MB5582:EE_
+x-ms-exchange-senderadcheck: 1
+x-ms-exchange-antispam-relay: 0
+x-microsoft-antispam: BCL:0;
+x-microsoft-antispam-message-info: T5ieifjAeEMeo3mWd4xAochML61jjduP3/tV9mQz/Jvda4SPGJX8q6cnPR5CYDF3pU3ubfCB8S0g8ki3Hy30y6z2kUHiRqOzpDlwpjCLCOhDzgZo+isbvJ7n+mL/Aus8Qljr2WvFmU5FVFfCQhdLxoZQhRFp3NzOaZCgSXe1aoNOXqiCjFyW223l/bDFa4lrSdP8zCXPXTUUGARBg9vxxVz1dM5zGa4v5N6TpE8cb1o+XObkguRzOr4gyuF4hVxP6E0h3ATI4LKhnkMXk+4M9xCHQOeRsaycUB4HtZhpTMlByGxcBq/lUvg3i4fdtM/NEiQBtyRywzyHqIR1VW3JoG9UCgo0u1MTUa84v6MBh++XeudVKj1lXvsuyJSxK+ugExVrfhra7dXANSpRemiFPISMuDI5pSXMjqP+YMEpTiZJFfRlNc0JDBeJY+w2CC8PjZse3tWl5tFVHBpqIySIOpGZaZB41XElWukuor2F3bpKLfdkzvdRDi+SRgDd0SO+sWgMeTwneFvJG92J0HPc0MnRR7cKBsUfoc7C2Gj+5JuuTPBRvYQQ3BosJxKVmwleop1YHRfgtgDMRYK9IXvEnN30XZgzaUXzUDGsYsHn0H4=
+x-forefront-antispam-report: CIP:255.255.255.255;CTRY:;LANG:en;SCL:1;SRV:;IPV:NLI;SFV:NSPM;H:SI6PR01MB6295.apcprd01.prod.exchangelabs.com;PTR:;CAT:NONE;SFS:(13230031)(376005)(366007)(1800799015);DIR:OUT;SFP:1102;
+x-ms-exchange-antispam-messagedata-chunkcount: 1
+x-ms-exchange-antispam-messagedata-0: iMpkzNgwgr+FA2a0GQ5yRkeEKXa+vXIoLbfSxiM7tUjLD5uiJZ7PGOIQcwDoqrSBU2c3RJCgIob6c9llvjIh5fILPKopCAFZgmKxTFOU0IUMSWTYujeTkM28U1tInbfWxnbSLyEJ1TRNoSWkvc4Jg8n5SsHT8LpQe6rCnVbWUCzBoSFrA+37/VYofhptr2EMSBlLxm+FjpJInkR5hDsqPAdDiqyWxs9/awp3C/8MgXNrpRKoyzL+Km24xUQ4Zdmjz2mwf6dUHok5kqWv0rLJHn2jUDCK4w9OVMx3odnJ7BZId+kxnX5O24XnUHzdS1RlKJ5CuwuhxfsDRfrLllZzfe2uBMpcIdJiBCd0HBsUXP9XPdsTiHZXWwcpqCtzIUMVdefWjwKkC3B1vp6MAq4yL3sHGgSo7Oz0s5O3kF1Mna8wohGsAHwSvXecVZOu89jITXtyr86R6xVifvKvMh3ol7seYBpnibTwkxV6QLIE7ChYIdQim/nX06XbONzc1H94GD93RFsaBHBrCyjSJJQXFzWIZpcfX98TcF9geWuL6Foikg6XT1OBznb582kTa6wp9ReCcpPn5gAO4rSH3doW2Qi0wxUDxiokiNlKwL64LhGTzlV/QK+pezSMuvW4m/tXYpWUBHtp0ovz0GTtoTe/cz67fMu7vV2xQxCY9QMJcSNB3nF7LbZezWzP89GBwS9bOuic5ffF5KB/7CcILwiKfL1JfVG6hAKwG61CA4upP+6FFQiS0972PyHdYpYYFICQ0G7NXbyz3e7KmnEinB+9ZI319LXkpsVwu45MX2OFv2NpMcZpYnY3drq4mEeGi9HU33P8SjxfIWn+jNTyiqeDCFJEQmowifAnSwLekDeSgJSkjuFnYzEGa7eQiw4oWHLZ0SnTlZReOWXViMhddhlqGlDkXu1sWNpuLut1PJBejwkLJ1SGHST2G2HpvWNcL7tFD4NL3wa+PrKO6JirHF/kjuoYAYy7tMsdSD1VchqQ6c8CxEtenlzomM9QSxybtj+xaPZUJwROqmj4cjOSNIXjcYRS3A3U4w1Keleh9/L8mBKiLrQfvaGjmBDVlAPlwI83jIHIiXTgfI6ISNi8kZWOuV/r7VJ/KIGfLnQXWc1PRYU6I0XJ5BjNln1hflo9/q2/3iipRwZT+fJaDA3WIwHsnfaPjo7uZOmIEm4gmzkweKahpbGszicz1P3JScj4TWk5WkRck8EwBr0oOwKqE12SBw51Y3IYyx1QqE1Lsv0rkSmhrGatqWygSv4DndAxpjgqQuLxxYwuxk9ehVFLy20ISkw95dXKgfPfKL93hNbOIPQaSYg8Pr1ad20fp5nx4KDkw6MU5qZIjiWZs+3f40zwWY3647odO8/unhlDTG4RWknxvmjVF3Rh4tmErSFngBdSuOsEUw2bnwLDMykDfPCFsaP/hENCc3kvBhspTXUsiXNsuIrwAV2B/SowKx61Z9NbW/JhzUirmGX8jA2EmGyYx2WhM/wupNe8tIdK/EPmYOUhH2eKyKkrZjQLkG431UYDFABt6iJMhg8i6dpUEc8hDNl56Ku2OrtlnZmc/DP3+jRarxqjvTtb6MPWSozTLoxNcAR3T/8ynQ6d7/1c2KfYKg==
+Content-Type: multipart/mixed; boundary="_007_SI6PR01MB62956538FEF127751170BEC8CF2C2SI6PR01MB6295apcp_"
+MIME-Version: 1.0
+X-OriginatorOrg: bintuluport.com.my
+X-MS-Exchange-CrossTenant-AuthAs: Internal
+X-MS-Exchange-CrossTenant-AuthSource: SI6PR01MB6295.apcprd01.prod.exchangelabs.com
+X-MS-Exchange-CrossTenant-Network-Message-Id: 2354957f-1e13-4d86-f2b1-08dc47c26714
+X-MS-Exchange-CrossTenant-originalarrivaltime: 19 Mar 2024 03:12:25.7858 (UTC)
+X-MS-Exchange-CrossTenant-fromentityheader: Hosted
+X-MS-Exchange-CrossTenant-id: 65927425-e5ca-4f20-a1c1-55681159df7d
+X-MS-Exchange-CrossTenant-mailboxtype: HOSTED
+X-MS-Exchange-CrossTenant-userprincipalname: EnnAzhGyGzDCRW1mGTn1H8VKQs6HqxQLJyHYE5y819w54uU0YGA8ik0JeXRzX5nKABUU7xvhp8vyv4EATzGrjjbwaWSg0bS3h/7LvWg0UKw9q9+Ue7oRR60Q1WlnxHkj
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: JH0PR01MB5582
+
+--_007_SI6PR01MB62956538FEF127751170BEC8CF2C2SI6PR01MB6295apcp_
+Content-Type: multipart/related; boundary="_006_SI6PR01MB62956538FEF127751170BEC8CF2C2SI6PR01MB6295apcp_"; type="multipart/alternative"
+
+--_006_SI6PR01MB62956538FEF127751170BEC8CF2C2SI6PR01MB6295apcp_
+Content-Type: multipart/alternative; boundary="_000_SI6PR01MB62956538FEF127751170BEC8CF2C2SI6PR01MB6295apcp_"
+
+--_000_SI6PR01MB62956538FEF127751170BEC8CF2C2SI6PR01MB6295apcp_
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+
+Greetings from Bintulu Port Holdings Berhad Group of Companies!
+
+Dear Sir / Madam,
+
+We are pleased to offer your student a placement for Industrial Training in=
+ Bintulu Port subject to the terms and conditions as stipulated in the offe=
+r letter.
+
+The details are as follows:
+
+Name
+
+Stacheareena Veeja Anak Sintan
+
+Training Period
+
+4 June 2024 - 1 November 2024
+
+Division / Department
+
+Group Information Technology, BPHB
+
+
+
+Name
+
+Awangku Hanif Nurhisyam Bin Awangku Masparbu
+
+Training Period
+
+4 June 2024 - 1 November 2024
+
+Division / Department
+
+Group Information Technology, BPHB
+
+
+
+Kindly revert with an email on the Industrial Training  Acknowledgement of =
+ Acceptance status for our record and necessary action.
+
+
+Thanks & Have a Nice Day :)
+
+An Honour to Deliver
+
+Zamzatul Azwani Binti Sazali
+Clerk, Talent Management
+Group Human Resources Management
+Bintulu Port Holdings Berhad
+
+EXT : 086291466 (DIRECT LINE)
+
+[cid:image001.png@01DA79ED.FE631F90]
+
+This e-mail and any attachments may contain confidential and privileged inf=
+ormation. If you are not the intended recipient, please notify the sender i=
+mmediately by return e-mail, delete this e-mail and destroy any copies. Any=
+ dissemination or use of this information by a person other than the intend=
+ed recipient is unauthorized and may be illegal.
+
+STATEMENT ON ANTI BRIBERY AND NO GIFT POLICY OF BPHB GROUP
+
+Gift can be seen as a bribe that may tarnish our Company's reputation. Henc=
+e, we at BPHB Group adopts zero tolerance approach to all forms of corrupti=
+on and bribery and upholds No-Gift Policy in all of our business dealings. =
+We are committed to conduct all of our business in an honest and ethical ma=
+nner with transparency and will act professionally and fairly in all of our=
+ business relationships.
+
+Disclaimer by BPHB Group: This message is intended only for the use of the =
+person to whom it is expressly addressed and may contain information that i=
+s confidential and legally privileged. If you are not the intended recipien=
+t, you are hereby notified that any use, reliance on, reference to, review,=
+ disclosure or copying of the message and the information it contains for a=
+ny purpose is prohibited. If you have this message in error, please notify =
+the sender by reply e-mail of the misdelivery and delete all its contents. =
+Opinions, conclusions and other information in this message that do not rel=
+ate to the official business of Bintulu Port Holdings Berhad Group shall be=
+ understood as neither given nor endorsed by it.
+
+--_000_SI6PR01MB62956538FEF127751170BEC8CF2C2SI6PR01MB6295apcp_
+Content-Type: text/html; charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+
+<html xmlns:v=3D"urn:schemas-microsoft-com:vml" xmlns:o=3D"urn:schemas-micr=
+osoft-com:office:office" xmlns:w=3D"urn:schemas-microsoft-com:office:word" =
+xmlns:m=3D"http://schemas.microsoft.com/office/2004/12/omml" xmlns=3D"http:=
+//www.w3.org/TR/REC-html40">
+<head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dus-ascii"=
+>
+<meta name=3D"Generator" content=3D"Microsoft Word 15 (filtered medium)">
+<!--[if !mso]><style>v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style><![endif]--><style><!--
+/* Font Definitions */
+@font-face
+=09{font-family:Wingdings;
+=09panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+=09{font-family:"Cambria Math";
+=09panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+=09{font-family:Calibri;
+=09panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+=09{font-family:"Ink Free";
+=09panose-1:3 8 4 2 0 5 0 0 0 0;}
+@font-face
+=09{font-family:"Segoe UI Semibold";
+=09panose-1:2 11 7 2 4 2 4 2 2 3;}
+/* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+=09{margin:0cm;
+=09margin-bottom:.0001pt;
+=09font-size:11.0pt;
+=09font-family:"Calibri",sans-serif;
+=09mso-fareast-language:EN-US;}
+a:link, span.MsoHyperlink
+=09{mso-style-priority:99;
+=09color:#0563C1;
+=09text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+=09{mso-style-priority:99;
+=09color:#954F72;
+=09text-decoration:underline;}
+span.EmailStyle17
+=09{mso-style-type:personal-compose;
+=09font-family:"Arial",sans-serif;
+=09color:windowtext;
+=09font-weight:normal;
+=09font-style:normal;
+=09text-decoration:none none;}
+p.elementtoproof, li.elementtoproof, div.elementtoproof
+=09{mso-style-name:elementtoproof;
+=09margin:0cm;
+=09margin-bottom:.0001pt;
+=09font-size:11.0pt;
+=09font-family:"Calibri",sans-serif;}
+.MsoChpDefault
+=09{mso-style-type:export-only;
+=09font-family:"Calibri",sans-serif;
+=09mso-fareast-language:EN-US;}
+@page WordSection1
+=09{size:612.0pt 792.0pt;
+=09margin:72.0pt 72.0pt 72.0pt 72.0pt;}
+div.WordSection1
+=09{page:WordSection1;}
+--></style><!--[if gte mso 9]><xml>
+<o:shapedefaults v:ext=3D"edit" spidmax=3D"1026" />
+</xml><![endif]--><!--[if gte mso 9]><xml>
+<o:shapelayout v:ext=3D"edit">
+<o:idmap v:ext=3D"edit" data=3D"1" />
+</o:shapelayout></xml><![endif]-->
+</head>
+<body lang=3D"EN-MY" link=3D"#0563C1" vlink=3D"#954F72">
+<div class=3D"WordSection1">
+<p class=3D"elementtoproof"><i><span style=3D"font-family:&quot;Arial&quot;=
+,sans-serif;color:#212121">Greetings from Bintulu Port Holdings Berhad Grou=
+p of Companies!</span></i><o:p></o:p></p>
+<p style=3D"background:white"><span style=3D"font-family:&quot;Arial&quot;,=
+sans-serif;color:#212121">Dear Sir / Madam,</span><o:p></o:p></p>
+<p style=3D"background:white"><span style=3D"font-family:&quot;Arial&quot;,=
+sans-serif;color:#212121">We are pleased to offer your student a&nbsp;place=
+ment&nbsp;for Industrial Training in Bintulu Port subject to the terms and =
+conditions as stipulated in the offer letter.</span><o:p></o:p></p>
+<p style=3D"background:white"><span style=3D"font-family:&quot;Arial&quot;,=
+sans-serif;color:#212121">The details are as follows:</span><o:p></o:p></p>
+<table class=3D"MsoNormalTable" border=3D"0" cellspacing=3D"0" cellpadding=
+=3D"0" width=3D"572" style=3D"width:428.7pt;background:white;border-collaps=
+e:collapse">
+<tbody>
+<tr style=3D"height:20.85pt">
+<td width=3D"194" style=3D"width:145.85pt;border:solid windowtext 1.0pt;bac=
+kground:#DEEAF6;padding:0cm 5.4pt 0cm 5.4pt;height:20.85pt">
+<p><b><span style=3D"font-family:&quot;Arial&quot;,sans-serif;color:black">=
+Name</span></b><o:p></o:p></p>
+</td>
+<td width=3D"376" style=3D"width:282.15pt;border:solid windowtext 1.0pt;bor=
+der-left:none;padding:0cm 5.4pt 0cm 5.4pt;height:20.85pt;box-sizing: border=
+-box">
+<p class=3D"elementtoproof"><span style=3D"font-family:&quot;Arial&quot;,sa=
+ns-serif;color:#212121">Stacheareena Veeja Anak Sintan</span><o:p></o:p></p=
+>
+</td>
+</tr>
+<tr style=3D"height:20.0pt">
+<td width=3D"194" style=3D"width:145.85pt;border:solid windowtext 1.0pt;bor=
+der-top:none;background:#DEEAF6;padding:0cm 5.4pt 0cm 5.4pt;height:20.0pt;b=
+ox-sizing: border-box">
+<p><b><span style=3D"font-family:&quot;Arial&quot;,sans-serif;color:black">=
+Training Period</span></b><o:p></o:p></p>
+</td>
+<td width=3D"376" style=3D"width:282.15pt;border-top:none;border-left:none;=
+border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;pa=
+dding:0cm 5.4pt 0cm 5.4pt;height:20.0pt;box-sizing: border-box">
+<p class=3D"elementtoproof"><span style=3D"font-family:&quot;Arial&quot;,sa=
+ns-serif;color:#212121">4 June 2024 &#8211; 1 November 2024</span><o:p></o:=
+p></p>
+</td>
+</tr>
+<tr style=3D"height:20.85pt">
+<td width=3D"194" style=3D"width:145.85pt;border:solid windowtext 1.0pt;bor=
+der-top:none;background:#DEEAF6;padding:0cm 5.4pt 0cm 5.4pt;height:20.85pt;=
+box-sizing: border-box">
+<p><b><span style=3D"font-family:&quot;Arial&quot;,sans-serif;color:black">=
+Division / Department</span></b><o:p></o:p></p>
+</td>
+<td width=3D"376" style=3D"width:282.15pt;border-top:none;border-left:none;=
+border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;pa=
+dding:0cm 5.4pt 0cm 5.4pt;height:20.85pt;box-sizing: border-box">
+<p class=3D"elementtoproof"><span style=3D"font-family:&quot;Arial&quot;,sa=
+ns-serif">Group Information Technology, BPHB<o:p></o:p></span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p style=3D"background:white"><span style=3D"font-family:&quot;Arial&quot;,=
+sans-serif;color:#212121"><o:p>&nbsp;</o:p></span></p>
+<table class=3D"MsoNormalTable" border=3D"0" cellspacing=3D"0" cellpadding=
+=3D"0" width=3D"572" style=3D"width:428.7pt;background:white;border-collaps=
+e:collapse">
+<tbody>
+<tr style=3D"height:20.85pt">
+<td width=3D"194" style=3D"width:145.85pt;border:solid windowtext 1.0pt;bac=
+kground:#DEEAF6;padding:0cm 5.4pt 0cm 5.4pt;height:20.85pt">
+<p><b><span style=3D"font-family:&quot;Arial&quot;,sans-serif;color:black">=
+Name</span></b><o:p></o:p></p>
+</td>
+<td width=3D"376" style=3D"width:282.15pt;border:solid windowtext 1.0pt;bor=
+der-left:none;padding:0cm 5.4pt 0cm 5.4pt;height:20.85pt;box-sizing: border=
+-box">
+<p class=3D"elementtoproof"><span style=3D"font-family:&quot;Arial&quot;,sa=
+ns-serif;color:#212121">Awangku Hanif Nurhisyam Bin Awangku Masparbu</span>=
+<o:p></o:p></p>
+</td>
+</tr>
+<tr style=3D"height:20.0pt">
+<td width=3D"194" style=3D"width:145.85pt;border:solid windowtext 1.0pt;bor=
+der-top:none;background:#DEEAF6;padding:0cm 5.4pt 0cm 5.4pt;height:20.0pt;b=
+ox-sizing: border-box">
+<p><b><span style=3D"font-family:&quot;Arial&quot;,sans-serif;color:black">=
+Training Period</span></b><o:p></o:p></p>
+</td>
+<td width=3D"376" style=3D"width:282.15pt;border-top:none;border-left:none;=
+border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;pa=
+dding:0cm 5.4pt 0cm 5.4pt;height:20.0pt;box-sizing: border-box">
+<p class=3D"elementtoproof"><span style=3D"font-family:&quot;Arial&quot;,sa=
+ns-serif;color:#212121">4 June 2024 &#8211; 1 November 2024</span><o:p></o:=
+p></p>
+</td>
+</tr>
+<tr style=3D"height:20.85pt">
+<td width=3D"194" style=3D"width:145.85pt;border:solid windowtext 1.0pt;bor=
+der-top:none;background:#DEEAF6;padding:0cm 5.4pt 0cm 5.4pt;height:20.85pt;=
+box-sizing: border-box">
+<p><b><span style=3D"font-family:&quot;Arial&quot;,sans-serif;color:black">=
+Division / Department</span></b><o:p></o:p></p>
+</td>
+<td width=3D"376" style=3D"width:282.15pt;border-top:none;border-left:none;=
+border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;pa=
+dding:0cm 5.4pt 0cm 5.4pt;height:20.85pt;box-sizing: border-box">
+<p class=3D"elementtoproof"><span style=3D"font-family:&quot;Arial&quot;,sa=
+ns-serif">Group Information Technology, BPHB<o:p></o:p></span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p style=3D"background:white"><span style=3D"font-family:&quot;Arial&quot;,=
+sans-serif;color:#212121"><o:p>&nbsp;</o:p></span></p>
+<p style=3D"background:white"><span style=3D"font-family:&quot;Arial&quot;,=
+sans-serif;color:#212121">Kindly revert with an email on the Industrial Tra=
+ining&nbsp; Acknowledgement of&nbsp; Acceptance status for our record and n=
+ecessary action.</span><o:p></o:p></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:10.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:10.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:10.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif;mso-fareast-language:ZH-TW">Thanks &amp; Have a Nice D=
+ay
+</span><span style=3D"font-size:10.0pt;font-family:Wingdings;mso-fareast-la=
+nguage:ZH-TW">J</span><span style=3D"font-size:10.0pt;font-family:&quot;Ari=
+al&quot;,sans-serif;mso-fareast-language:ZH-TW"><o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:10.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif;mso-fareast-language:ZH-TW"><o:p>&nbsp;</o:p></span></=
+p>
+<p class=3D"MsoNormal"><b><i><span style=3D"font-size:16.0pt;font-family:&q=
+uot;Ink Free&quot;;color:#0053A1;mso-fareast-language:EN-MY">An Honour to D=
+eliver &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&n=
+bsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></i></b><span style=3D"font-family:&quot;Arial&quot;,sans-serif;colo=
+r:#0053A1"><o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:10.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif;mso-fareast-language:ZH-TW"><o:p>&nbsp;</o:p></span></=
+p>
+<p class=3D"MsoNormal"><b><span style=3D"font-size:10.0pt;font-family:&quot=
+;Arial&quot;,sans-serif;mso-fareast-language:ZH-TW">Zamzatul Azwani Binti S=
+azali<o:p></o:p></span></b></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:10.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif;mso-fareast-language:ZH-TW">Clerk, Talent Management</=
+span><span style=3D"font-size:10.0pt;font-family:&quot;Arial&quot;,sans-ser=
+if;mso-fareast-language:ZH-TW"><o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:10.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif;mso-fareast-language:ZH-TW">Group Human Resources Mana=
+gement</span><span style=3D"font-size:10.0pt;font-family:&quot;Arial&quot;,=
+sans-serif;mso-fareast-language:ZH-TW"><o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:10.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif;mso-fareast-language:ZH-TW">Bintulu Port Holdings Berh=
+ad<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:10.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif;mso-fareast-language:ZH-TW"><o:p>&nbsp;</o:p></span></=
+p>
+<p class=3D"MsoNormal"><b><span style=3D"font-size:10.0pt;font-family:&quot=
+;Arial&quot;,sans-serif;mso-fareast-language:ZH-TW">EXT : 086291466 (DIRECT=
+ LINE)<o:p></o:p></span></b></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:10.0pt;font-family:&quot;Se=
+goe UI Semibold&quot;,sans-serif;color:#AD2569;mso-fareast-language:ZH-TW">=
+<o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:10.0pt;font-family:&quot;Se=
+goe UI Semibold&quot;,sans-serif;color:#AD2569;mso-fareast-language:EN-MY">=
+<img width=3D"401" height=3D"155" style=3D"width:4.177in;height:1.6145in" i=
+d=3D"Picture_x0020_1" src=3D"cid:image001.png@01DA79ED.FE631F90"></span><sp=
+an style=3D"font-size:10.0pt;font-family:&quot;Segoe UI Semibold&quot;,sans=
+-serif;color:#AD2569;mso-fareast-language:ZH-TW"><o:p></o:p></span></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+</div>
+This e-mail and any attachments may contain confidential and privileged inf=
+ormation. If you are not the intended recipient, please notify the sender i=
+mmediately by return e-mail, delete this e-mail and destroy any copies. Any=
+ dissemination or use of this information
+ by a person other than the intended recipient is unauthorized and may be i=
+llegal.<!DOCTYPE html>
+<div style=3D"font-size:9pt;  font-family: 'Calibri',sans-serif;">
+<p><b><u>STATEMENT ON ANTI BRIBERY AND NO GIFT POLICY OF BPHB GROUP</u></b>=
+</p>
+<p>Gift can be seen as a bribe that may tarnish our Company&#8217;s reputat=
+ion. Hence, we at BPHB Group adopts zero tolerance approach to all forms of=
+ corruption and bribery and upholds No-Gift Policy in all of our business d=
+ealings. We are committed to conduct all
+ of our business in an honest and ethical manner with transparency and will=
+ act professionally and fairly in all of our business relationships.
+</p>
+<p><u>Disclaimer by BPHB Group:</u> This message is intended only for the u=
+se of the person to whom it is expressly addressed and may contain informat=
+ion that is confidential and legally privileged. If you are not the intende=
+d recipient, you are hereby notified
+ that any use, reliance on, reference to, review, disclosure or copying of =
+the message and the information it contains for any purpose is prohibited. =
+If you have this message in error, please notify the sender by reply e-mail=
+ of the misdelivery and delete all
+ its contents. Opinions, conclusions and other information in this message =
+that do not relate to the official business of Bintulu Port Holdings Berhad=
+ Group shall be understood as neither given nor endorsed by it.</p>
+</div>
+</body>
+</html>
+
+--_000_SI6PR01MB62956538FEF127751170BEC8CF2C2SI6PR01MB6295apcp_--
+--_006_SI6PR01MB62956538FEF127751170BEC8CF2C2SI6PR01MB6295apcp_
+Content-Type: image/png; name="image001.png"
+Content-Description: image001.png
+Content-Disposition: inline; filename="image001.png"; size=58027; creation-date="Tue, 19 Mar 2024 03:12:25 GMT"; modification-date="Tue, 19 Mar 2024 03:12:25 GMT"
+Content-ID: <image001.png@01DA79ED.FE631F90>
+Content-Transfer-Encoding: base64
+
+
+--_006_SI6PR01MB62956538FEF127751170BEC8CF2C2SI6PR01MB6295apcp_--
+--_007_SI6PR01MB62956538FEF127751170BEC8CF2C2SI6PR01MB6295apcp_
+Content-Type: application/pdf; name="AWANGKU HANIF NURHISYAM.pdf"
+Content-Description: AWANGKU HANIF NURHISYAM.pdf
+Content-Disposition: attachment; filename="AWANGKU HANIF NURHISYAM.pdf"; size=586925; creation-date="Tue, 19 Mar 2024 03:09:57 GMT"; modification-date="Tue, 19 Mar 2024 03:12:24 GMT"
+Content-Transfer-Encoding: base64
+
+
+--_007_SI6PR01MB62956538FEF127751170BEC8CF2C2SI6PR01MB6295apcp_
+Content-Type: application/pdf; name="STACHEAREENA VEEJA ANAK SINTAN.pdf"
+Content-Description: STACHEAREENA VEEJA ANAK SINTAN.pdf
+Content-Disposition: attachment; filename="STACHEAREENA VEEJA ANAK SINTAN.pdf"; size=584463; creation-date="Tue, 19 Mar 2024 03:10:00 GMT"; modification-date="Tue, 19 Mar 2024 03:12:25 GMT"
+Content-Transfer-Encoding: base64
+
+
+--_007_SI6PR01MB62956538FEF127751170BEC8CF2C2SI6PR01MB6295apcp_--
