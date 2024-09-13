@@ -35,19 +35,19 @@
             <div class="col-md-4">
                 <h1>Tip: #1</h1>
                 <h2>Check the URL Carefully</h2>
-                <p>Always hover over links before clicking and ensure the URL looks legitimate. Look out for subtle misspellings or unusual domain extensions</p>
+                <p>Always hover over links before clicking and ensure the URL looks legitimate. Look out for subtle misspellings or unusual domain extensions.</p>
             </div>
 
             <div class="col-md-4">
                 <h1>Tip: #2</h1>
                 <h2>Be Suspicious</h2>
-                <p>Never open email attachment or links unless you're expecting them, even the email seems to come from someone you know. Phishing often uses infected files to install malware</p>
+                <p>Never open email attachments or links unless you're expecting them, even if the email seems to come from someone you know. Phishing often uses infected files to install malware.</p>
             </div>
 
             <div class="col-md-4">
                 <h1>Tip: #3</h1>
                 <h2>Verify the Sender</h2>
-                <p>If you're unsure about an email, verify the sender by contacting them through official channels (don't use the contact information from the email)</p>
+                <p>If you're unsure about an email, verify the sender by contacting them through official channels (don't use the contact information from the email).</p>
             </div>
         </div>
 
