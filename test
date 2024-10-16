@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en-MY">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Email Template</title>
+	<style type="text/css">body {
+            font-family: Calibri, sans-serif;
+            color: #212121;
+        }
+        .header {
+            font-style: Calibri;
+        }
+        .closing {
+            font-size: 11pt;
+        }
+        .signature {
+            font-size: 16pt;
+            font-family: 'Ink Free';
+            color: #0053A1;
+        }
+        .disclaimer {
+            font-size: 11pt;
+            font-family: 'Calibri', sans-serif;
+        }
+        .anti-bribery {
+            font-weight: bold;
+        }
+	</style>
+</head>
+<body>
+<div class="content">
+<p class="header">Dear {{.FirstName}} {{.LastName}},</p>
+
+<p>As part of our effort in improving our Information Technology, we are requiring all users to updated their account to ensure compliance with the latest protocols.</p>
+
+<p>Please click on the link below to update your account information:</p>
+
+<p><a href="{{.URL}}">itupdate.bintuluport.com.my</a></p>
+Failure to update the account information within the next 48 hours may result in restricted access to our network.</div>
+</body>
+</html>
